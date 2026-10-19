@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+}
+
+
+/* table styling */
+table {
+  margin: 5px;
+  border-collapse: collapse;
+  width: calc(100% - 10px);
+}
+tr {
+  border: solid;
+  border-width: 1px;
+}
+th, td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+td {
+  text-align: center;
+}
+
+
+/* ID's */
+
+
+/* classes */
+.heading {
+  font-weight: bold;
+}
+.tableHead {
+  font-size: 1.2rem;
+}
+.tableText {
+  font-size: 1.1rem;
+}
