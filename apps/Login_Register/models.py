@@ -53,12 +53,12 @@ class Validator(models.Manager):
     else:
       hashed_pw = bcrypt.hashpw(form_data["password"].encode(), bcrypt.gensalt())
       user = User.objects.create(
-        # first_name = form_data["first_name"],
-        # last_name = form_data["last_name"],
-        user_name = form_data["user_name"],
-        email = form_data["email"].lower(),
-        password = hashed_pw,
-        # date= form_data["date"],
+      # first_name = form_data["first_name"],
+      # last_name = form_data["last_name"],
+      user_name = form_data["user_name"],
+      email = form_data["email"].lower(),
+      password = hashed_pw,
+      # date= form_data["date"],
       )
       return (True, user)
 

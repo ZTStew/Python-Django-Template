@@ -2,30 +2,33 @@
 <html>
 <!-- <html[tab] -->
   <head>
-    <title>Django Template</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <title>Django Template</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
   </head>
   <body>
-    <h1>DjangoTemplate - Dashboard</h1>
+  <h1>DjangoTemplate - Dashboard</h1>
 
-    <!-- List of uploaded users -->
-    {% if users %}
-      <h2>All Users in the database:</h2>
-      <table>
-        <tr>
-          <th class="tableHead">User Name: </th>
-        </tr>
-        {% for user in users %}
-          <tr>
-            <td class="tableText">{{ user.user_name }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    {% else %}
-      <p>No Users.</p>
-    {% endif %}
+  <!-- List of uploaded users -->
+  {% if users %}
+    <h2>All Users in the database:</h2>
+    <table>
+    <tr>
+      <th class="tableHead">User Name: </th>
+    </tr>
+    {% for user in users %}
+      <tr>
+      <td class="tableText">{{ user.user_name }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+  <p>No Users.</p>
+  {% endif %}
 
-    <h3><a href="/ln">Log In</a></h3>
+  {% if logged_in %}
     <h3><a href="/ln/logout">Logout</a></h3>
+  {% else %}
+    <h3><a href="/ln">Log In</a></h3>
+  {% endif %}
   </body>
 </html>
